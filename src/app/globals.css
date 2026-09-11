@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base: #fffafb;
+  --color-surface: #f8edef;
+  --color-blush: #e7bdc7;
+  --color-rose: #a94f68;
+  --color-wine: #672438;
+  --color-gold: #a94f68;
+  --color-gold-light: #e7bdc7;
+  --color-ink: #25161b;
+  --color-muted: #765e66;
+
+  --font-display: var(--font-cormorant);
+  --font-sans: var(--font-jakarta);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis handles smooth scroll */
+}
+
+body {
+  background-color: var(--color-base);
+  color: var(--color-ink);
+  font-family: var(--font-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection { background: var(--color-blush); color: var(--color-ink); }
+
+.text-balance { text-wrap: balance; }
+
+.rose-grain {
+  background-image: radial-gradient(circle at 12% 18%, rgb(255 255 255 / .9), transparent 22%), radial-gradient(circle at 88% 78%, rgb(169 79 104 / .15), transparent 26%);
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* WhatsApp button pulse */
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  50% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+}
+
+.animate-wa-pulse {
+  animation: wa-pulse 2.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
