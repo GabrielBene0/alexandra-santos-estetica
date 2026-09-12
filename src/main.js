@@ -138,7 +138,6 @@ function setupMotion() {
     .from(heroWords, { yPercent: 110, rotate: 2, autoAlpha: 0, duration: 0.8, stagger: 0.045 }, "-=0.35")
     .from(".hero-lead", { y: 24, autoAlpha: 0, duration: 0.7 }, "-=0.45")
     .from(".hero-actions", { y: 20, autoAlpha: 0, duration: 0.65 }, "-=0.42")
-    .from(".hero-assurance", { y: 12, autoAlpha: 0, duration: 0.55 }, "-=0.38")
     .from(".hero-facts li", { y: 15, autoAlpha: 0, duration: 0.55, stagger: 0.08 }, "-=0.25")
     .from("[data-hero-image]", { clipPath: "inset(100% 0 0 0)", autoAlpha: 0, duration: 1.15 }, "-=1.25")
     .from("[data-hero-image] img", { scale: 1.065, duration: 1.45 }, "<")

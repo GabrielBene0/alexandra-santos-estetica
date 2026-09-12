@@ -252,7 +252,7 @@ Avoid: beauty-filter plasticity, face alteration, generic model, washed-out expo
 
 #### 12A — Hero integrado ao fundo grafite-vinho
 
-**Uso:** primeira dobra do site. O fundo da própria fotografia deve terminar na mesma cor do CSS (`#1A1014`) para não surgir uma caixa retangular ao redor do retrato.
+**Uso:** alternativa de hero preservada no projeto, atualmente não utilizada.
 
 ```text
 Use case: identity-preserve
@@ -296,7 +296,7 @@ Todos os arquivos abaixo estão em `assets/generated/` e já foram produzidos em
 
 | Arquivo | Função no layout | Dimensão |
 |---|---|---:|
-| `01-hero-alexandra-rosa.png` | versão anterior do hero, preservada e não utilizada | 1122 × 1402 |
+| `01-hero-alexandra-rosa.png` | hero principal — **versão ativa, reposicionada para preservar a cabeça** | 1122 × 1402 |
 | `02a-macro-pele-labios.png` | versão anterior genérica — arquivo preservado, não utilizado | 1122 × 1402 |
 | `02b-preparo-clinico.png` | colagem clínica — preparo | 1122 × 1402 |
 | `02c-detalhe-organico.png` | colagem clínica — detalhe | 1672 × 941 |
@@ -316,7 +316,7 @@ Todos os arquivos abaixo estão em `assets/generated/` e já foram produzidos em
 | `11a-alexandra-studio-naturalidade.png` | card Naturalidade — **nova versão ativa em estúdio** | 1122 × 1402 |
 | `11b-alexandra-studio-clareza.png` | card Clareza — **nova versão ativa em estúdio** | 1122 × 1402 |
 | `11c-alexandra-studio-seguranca.png` | banner Segurança e critério — **nova versão ativa sem filtro rosa** | 1672 × 941 |
-| `12a-hero-alexandra-natural.png` | hero principal — **versão ativa com pose natural e margem acima da cabeça** | 1122 × 1402 |
+| `12a-hero-alexandra-natural.png` | alternativa de hero, preservada e não utilizada | 1122 × 1402 |
 | `12b-macro-pele-modelo-ilustrativa.png` | mosaico de pele — **versão ativa sem repetir a Alexandra** | 1024 × 1536 |
 
 O logo com fundo transparente permanece em `assets/logo-alexandra-santos-transparente.png`. Ícones devem ser SVGs e a prova social deve ser inserida apenas com imagens reais autorizadas.
