@@ -442,9 +442,9 @@ h3 {
 .hero-media {
   position: absolute;
   z-index: 2;
-  right: -5vw;
+  right: clamp(24px, 3vw, 56px);
   bottom: 0;
-  width: min(59vw, 1020px);
+  width: min(56vw, 920px);
   height: calc(100% - 32px);
   pointer-events: none;
 }
@@ -459,8 +459,8 @@ h3 {
   object-fit: cover;
   object-position: 50% 28%;
   mix-blend-mode: normal;
-  -webkit-mask-image: linear-gradient(to right, transparent 0, black 13%, black 100%);
-  mask-image: linear-gradient(to right, transparent 0, black 13%, black 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 6%, black 100%);
+  mask-image: linear-gradient(to right, transparent 0, black 6%, black 100%);
 }
 
 .motion-word {
@@ -1313,8 +1313,8 @@ h3 {
   }
 
   .hero-media {
-    right: -17vw;
-    width: 74vw;
+    right: 18px;
+    width: 62vw;
   }
 
   .hero-ghost {
