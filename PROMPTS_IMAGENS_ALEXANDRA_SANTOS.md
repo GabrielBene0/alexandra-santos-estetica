@@ -283,6 +283,31 @@ Constraints: visibly different identity, hair and styling from Alexandra; realis
 Avoid: resemblance to Alexandra, red lipstick, black long curls, fuchsia coat, beauty-filter skin, excessive retouching, uncanny eye, pink haze or glamour-ad artificiality.
 ```
 
+### 13 — Hero natural integrado, sem borda fotográfica
+
+**Uso:** versão ativa no hero. Mantém a pose aprovada e corrige o acabamento artificial e a transição do fundo para o grafite do site.
+
+```text
+Use case: identity-preserving professional photo edit.
+Asset type: vertical hero portrait for a premium aesthetics clinic landing page.
+
+Input roles: Image 1 is the exact edit target and composition reference. Images 2, 3, and 4 are identity references for Alexandra Santos only.
+
+Primary request: Refine Image 1 so it looks like a genuinely photographed high-end studio portrait, while preserving the approved pose, crossed arms, subject scale, placement, canvas proportions, crop, pink professional coat, jewelry, hairstyle, and Alexandra's recognizable identity.
+
+Face and human realism: Preserve Alexandra's identity exactly. Correct only subtle synthetic-looking artifacts: make facial anatomy and head/neck proportions fully natural, eyes aligned and alive, genuine relaxed soft smile, realistic teeth and lips, natural pores and fine skin texture, believable makeup, individual hair strands and a few restrained flyaways. Keep flattering professional retouching but no plastic skin and no generic AI beauty face.
+
+Background integration: Keep a localized soft rose/fuchsia studio rim glow immediately behind her hair and shoulders. The glow must dissolve gradually into a matte near-black burgundy background whose exact edge color is #1A1014. All four outer edges and corners must be uniformly #1A1014, with no hard pink rectangle, no vertical seam on the right, no visible backdrop boundary, and no light-colored strip. The subject must feel naturally embedded in the dark landing-page hero.
+
+Composition: Keep the same vertical 4:5 composition and the same pose and scale as Image 1. Preserve generous safety margin above all hair so the head can never be cropped. Keep her body on the right side with dark negative space on the left for website text.
+
+Lighting: Neutral softbox key light with realistic skin tones, soft shadow modeling, and a restrained pink rim light from behind. Premium beauty editorial photography, crisp focus, high dynamic range, natural color science.
+
+Constraints: Edit only realism and background integration. Preserve identity, outfit, position, folded arms, framing, jewelry, and hairstyle. No text, no logo, no watermark. Hands and fingers anatomically correct.
+
+Avoid: Generic or changed face, exaggerated head tilt, oversized head, plastic retouching, magenta skin, beauty-filter look, hard pink block, visible rectangular photo edge, checkerboard transparency, cropped hair, extra accessories, altered pose.
+```
+
 ## Ordem de produção recomendada
 
 1. Gerar `01`, `06A`, `06B` e `09` usando as referências da Alexandra; aprovar primeiro a fidelidade do rosto.
@@ -296,7 +321,7 @@ Todos os arquivos abaixo estão em `assets/generated/` e já foram produzidos em
 
 | Arquivo | Função no layout | Dimensão |
 |---|---|---:|
-| `01-hero-alexandra-rosa.png` | hero principal — **versão ativa, reposicionada para preservar a cabeça** | 1122 × 1402 |
+| `01-hero-alexandra-rosa.png` | versão anterior do hero, preservada e não utilizada | 1122 × 1402 |
 | `02a-macro-pele-labios.png` | versão anterior genérica — arquivo preservado, não utilizado | 1122 × 1402 |
 | `02b-preparo-clinico.png` | colagem clínica — preparo | 1122 × 1402 |
 | `02c-detalhe-organico.png` | colagem clínica — detalhe | 1672 × 941 |
@@ -318,5 +343,6 @@ Todos os arquivos abaixo estão em `assets/generated/` e já foram produzidos em
 | `11c-alexandra-studio-seguranca.png` | banner Segurança e critério — **nova versão ativa sem filtro rosa** | 1672 × 941 |
 | `12a-hero-alexandra-natural.png` | alternativa de hero, preservada e não utilizada | 1122 × 1402 |
 | `12b-macro-pele-modelo-ilustrativa.png` | mosaico de pele — **versão ativa sem repetir a Alexandra** | 1024 × 1536 |
+| `13a-hero-alexandra-natural-integrado.png` | hero principal — **versão ativa, natural e sem borda visível** | 1122 × 1402 |
 
 O logo com fundo transparente permanece em `assets/logo-alexandra-santos-transparente.png`. Ícones devem ser SVGs e a prova social deve ser inserida apenas com imagens reais autorizadas.
