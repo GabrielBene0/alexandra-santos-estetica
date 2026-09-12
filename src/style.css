@@ -607,7 +607,7 @@ h3 {
   position: absolute;
   z-index: -1;
   inset: 0;
-  background: linear-gradient(90deg, rgba(255, 247, 248, 0.98) 18%, rgba(244, 216, 224, 0.73) 60%, rgba(244, 216, 224, 0.42));
+  background: linear-gradient(90deg, rgba(255, 247, 248, 0.3) 0%, rgba(255, 247, 248, 0.42) 46%, rgba(244, 216, 224, 0.62) 100%);
   content: "";
 }
 
@@ -618,7 +618,7 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.45);
+  filter: saturate(0.72) contrast(1.03);
 }
 
 .card-wide {
@@ -962,7 +962,7 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.75);
+  filter: saturate(0.92) contrast(1.02);
   transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -999,7 +999,7 @@ h3 {
   margin-top: 120px;
   overflow: hidden;
   border-radius: 18px;
-  background: var(--rose-mist);
+  background: #fffafb;
   color: var(--text-dark);
 }
 
@@ -1007,7 +1007,7 @@ h3 {
   position: absolute;
   z-index: 1;
   inset: 0;
-  background: linear-gradient(90deg, var(--rose-mist) 8%, rgba(244, 216, 224, 0.96) 43%, rgba(244, 216, 224, 0.05) 78%);
+  background: linear-gradient(90deg, rgba(255, 250, 251, 0.99) 0%, rgba(255, 250, 251, 0.94) 39%, rgba(255, 250, 251, 0.42) 56%, rgba(255, 250, 251, 0) 70%);
   content: "";
 }
 
@@ -1018,7 +1018,7 @@ h3 {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  filter: saturate(0.65) hue-rotate(325deg);
+  filter: none;
 }
 
 .safety-copy {
@@ -1464,6 +1464,32 @@ h3 {
     object-position: center 30%;
   }
 
+  .safety-banner {
+    min-height: 700px;
+    margin-top: 80px;
+  }
+
+  .safety-banner::after {
+    background: linear-gradient(to bottom, rgba(255, 250, 251, 0.02) 0%, rgba(255, 250, 251, 0.16) 38%, rgba(255, 250, 251, 0.97) 60%, #fffafb 100%);
+  }
+
+  .safety-banner img {
+    height: 58%;
+    object-position: 70% center;
+  }
+
+  .safety-copy {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    padding: 40px;
+  }
+
+  .safety-copy h2 {
+    max-width: 680px;
+    font-size: clamp(2.9rem, 7vw, 4rem);
+  }
+
   .cta-grid {
     min-height: 0;
   }
@@ -1556,7 +1582,7 @@ h3 {
   }
 
   .image-card::after {
-    background: linear-gradient(to top, rgba(255, 247, 248, 0.98) 0%, rgba(244, 216, 224, 0.75) 65%, rgba(244, 216, 224, 0.3));
+    background: linear-gradient(to top, rgba(255, 247, 248, 0.94) 0%, rgba(255, 247, 248, 0.58) 42%, rgba(244, 216, 224, 0.16) 72%);
   }
 
   .image-card-copy,
@@ -1631,7 +1657,7 @@ h3 {
   }
 
   .safety-banner::after {
-    background: linear-gradient(to bottom, rgba(244, 216, 224, 0.22) 0%, var(--rose-mist) 52%);
+    background: linear-gradient(to bottom, rgba(255, 250, 251, 0.02) 0%, rgba(255, 250, 251, 0.14) 38%, rgba(255, 250, 251, 0.97) 57%, #fffafb 100%);
   }
 
   .safety-banner img {

@@ -199,6 +199,55 @@ Primary request: remover somente o fundo claro/texturizado e devolver a logo Ale
 Constraints: preservar todos os traços, árvore, perfil feminino, dourado, texto, acentos, alinhamento e bordas exatamente como no arquivo de origem. Não redesenhar nem corrigir o logo. Sem halo, sombra, caixa de fundo, texto extra ou marca-d’água.
 ```
 
+### 11 — Nova sessão de estúdio: Naturalidade, Clareza e Segurança
+
+**Uso:** substituir os dois closes repetitivos da seção escura e o retrato com dominante rosa do banner de segurança. As três imagens devem manter a pele em cor natural; o rosa forte fica restrito ao jaleco da Alexandra.
+
+#### 11A — Retrato “Naturalidade”
+
+```text
+Use case: identity-preserve
+Asset type: premium vertical editorial studio portrait for a luxury aesthetics landing-page card.
+Input images: all three supplied images are identity references of the same real client, Alexandra Santos.
+Primary request: Create a new photorealistic studio portrait of Alexandra Santos, preserving her recognizable facial identity, proportions, complexion, long black wavy hair, and warm confident expression. She is wearing her vivid fuchsia-pink professional aesthetics coat, styled cleanly and elegantly, in a relaxed three-quarter pose with a gentle natural smile. Show her from mid-torso upward with her hands posed naturally and anatomically correct.
+Scene/background: refined warm ivory seamless studio backdrop with a very subtle plaster texture and soft sculptural shadow, no clinic clutter.
+Composition: portrait 4:5 orientation, subject slightly right of center, enough uncluttered space in the lower third for an HTML dark gradient and caption, no tight macro crop.
+Lighting: neutral daylight-balanced softbox with delicate rim light, accurate natural skin tones, crisp eyes, realistic skin texture, premium commercial photography, high resolution.
+Color: neutral ivory and graphite surroundings; her coat remains distinctly vivid fuchsia pink. No pink or magenta cast on skin or background.
+Constraints: identity must match the references; realistic hair strands and fabric; professional, trustworthy, sophisticated; no text, no logo, no watermark, no medical instruments.
+Avoid: beauty-filter skin, plastic retouching, altered face, generic model, oversaturated magenta grade, heavy makeup changes, malformed hands, extra fingers, macro face crop.
+```
+
+#### 11B — Retrato “Clareza”
+
+```text
+Use case: identity-preserve
+Asset type: premium vertical editorial studio portrait for a second luxury aesthetics landing-page card.
+Input images: all three supplied images are identity references of Alexandra Santos.
+Primary request: Create a different new photorealistic studio photograph of Alexandra Santos while preserving her recognizable identity, face shape, medium warm skin tone, brown eyes, and long black wavy hair. She wears her vivid fuchsia-pink professional coat. Pose her in a calm side-facing three-quarter stance beside a subtle round tabletop mirror with a thin champagne-metal frame, looking back toward camera with composed confidence. Mid-torso portrait, hands relaxed and anatomically correct.
+Scene/background: minimalist warm-gray and ivory photography studio with a clean pedestal and gentle architectural shadow, editorial rather than clinical.
+Composition: portrait 4:5 orientation, Alexandra placed slightly left of center with visible contextual space, lower portion visually quiet for a dark HTML gradient and caption. Clearly different pose and framing from the first portrait.
+Lighting: neutral daylight-balanced key light, soft fill, clean highlights, natural skin color and skin texture, premium high-resolution commercial studio photography.
+Color: neutral ivory, warm gray and restrained champagne; the coat is the only strong pink. Absolutely no global pink filter or magenta haze.
+Constraints: preserve Alexandra's identity faithfully; no text, logo, watermark, syringes, gloves, or procedure; realistic mirror reflection only if visible.
+Avoid: generic model, macro crop, split-face collage, heavy retouching, pink-tinted skin/background, uncanny reflection, extra fingers, distorted facial features.
+```
+
+#### 11C — Banner “Segurança e critério”
+
+```text
+Use case: identity-preserve
+Asset type: ultra-wide studio hero/banner photograph for a luxury aesthetics website.
+Input images: all three supplied images are identity references of Alexandra Santos.
+Primary request: Create a fresh photorealistic professional studio portrait of Alexandra Santos, faithfully preserving her recognizable identity, face shape, medium warm skin tone, brown eyes, long glossy black wavy hair, and friendly confident presence. She wears her vivid fuchsia-pink professional aesthetics coat over a clean neutral top. Pose her on the right side, from waist/chest upward, one hand lightly supporting her chin or resting naturally, with a subtle composed smile.
+Scene/background: clean warm-white to very light neutral-gray seamless studio background with a faint soft shadow and premium editorial finish.
+Composition: wide 16:9 landscape, Alexandra occupies the right 40–44 percent; the left 55 percent is intentionally empty, clean and bright for website headline and body copy. Keep her full head and shoulders inside safe margins.
+Lighting: neutral daylight-balanced softbox, accurate natural skin tones, realistic pores and hair, gentle contouring, sharp professional high-resolution photograph.
+Color: background remains neutral white/ivory, skin retains natural warm color, coat remains authentic vivid fuchsia. No global rose wash, no pink fog, no magenta tint.
+Constraints: identity must clearly match the reference woman; no text, logo, watermark, furniture, medical equipment, decorative overlays, gradients or graphic elements burned into the image; correct hands.
+Avoid: beauty-filter plasticity, face alteration, generic model, washed-out exposure, monochrome pink grading, excessive smoothing, cropped hair, malformed fingers.
+```
+
 ## Ordem de produção recomendada
 
 1. Gerar `01`, `06A`, `06B` e `09` usando as referências da Alexandra; aprovar primeiro a fidelidade do rosto.
@@ -226,8 +275,11 @@ Todos os arquivos abaixo estão em `assets/generated/` e já foram produzidos em
 | `07-banner-avaliacao.png` | versão anterior genérica — arquivo preservado, não utilizado | 1916 × 821 |
 | `09a-cta-alexandra-rosa.png` | retrato grande do CTA final — **usar esta versão** | 1122 × 1402 |
 | `09b-cta-alexandra-detalhe-rosa.png` | cartão menor do CTA final; reutiliza o close rosa para consistência visual | 1122 × 1402 |
-| `10a-alexandra-diptico-identidade.png` | tela do celular e card de clareza — **versão ativa com a Alexandra** | 1122 × 1402 |
-| `10b-alexandra-macro-pele.png` | macro da abertura e card de naturalidade — **versão ativa com a Alexandra** | 1024 × 1536 |
-| `10c-alexandra-banner-avaliacao.png` | banner de segurança — **versão ativa com a Alexandra** | 1672 × 941 |
+| `10a-alexandra-diptico-identidade.png` | tela do celular; removida do card de clareza | 1122 × 1402 |
+| `10b-alexandra-macro-pele.png` | macro da abertura; removida do card de naturalidade | 1024 × 1536 |
+| `10c-alexandra-banner-avaliacao.png` | versão anterior do banner, preservada e não utilizada | 1672 × 941 |
+| `11a-alexandra-studio-naturalidade.png` | card Naturalidade — **nova versão ativa em estúdio** | 1122 × 1402 |
+| `11b-alexandra-studio-clareza.png` | card Clareza — **nova versão ativa em estúdio** | 1122 × 1402 |
+| `11c-alexandra-studio-seguranca.png` | banner Segurança e critério — **nova versão ativa sem filtro rosa** | 1672 × 941 |
 
 O logo com fundo transparente permanece em `assets/logo-alexandra-santos-transparente.png`. Ícones devem ser SVGs e a prova social deve ser inserida apenas com imagens reais autorizadas.
