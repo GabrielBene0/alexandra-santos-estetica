@@ -13,6 +13,41 @@ const faqItems = document.querySelectorAll(".faq-item");
 let lenis = null;
 let lenisTicker = null;
 
+function splitHeroTitle() {
+  const title = document.querySelector(".hero h1");
+  if (!title || title.dataset.motionSplit === "true") return [];
+
+  const accessibleLabel = title.innerText.replace(/\s+/g, " ").trim();
+  const fragment = document.createDocumentFragment();
+  const words = [];
+
+  Array.from(title.childNodes).forEach((node) => {
+    if (node.nodeName === "BR") {
+      const breakNode = document.createElement("br");
+      breakNode.setAttribute("aria-hidden", "true");
+      fragment.append(breakNode);
+      return;
+    }
+
+    node.textContent.split(/\s+/).filter(Boolean).forEach((word, index, list) => {
+      const span = document.createElement("span");
+      span.className = "motion-word";
+      span.setAttribute("aria-hidden", "true");
+      span.textContent = word;
+      fragment.append(span);
+      words.push(span);
+      if (index < list.length - 1) fragment.append(" ");
+    });
+  });
+
+  title.replaceChildren(fragment);
+  title.setAttribute("aria-label", accessibleLabel);
+  title.dataset.motionSplit = "true";
+  return words;
+}
+
+const heroWords = splitHeroTitle();
+
 function closeMenu() {
   menuButton?.setAttribute("aria-expanded", "false");
   if (menuButtonText) menuButtonText.textContent = "Abrir menu";
@@ -99,9 +134,16 @@ function setupMotion() {
   const heroTimeline = gsap.timeline({ defaults: { ease: "power3.out" } });
   heroTimeline
     .from(".nav", { autoAlpha: 0, duration: 0.75 })
-    .from("[data-hero-item]", { y: 34, autoAlpha: 0, duration: 0.85, stagger: 0.1 }, "-=0.35")
-    .from("[data-hero-image]", { x: 55, autoAlpha: 0, duration: 1.05 }, "-=0.85")
-    .from(".hero-orbit", { scale: 0.72, autoAlpha: 0, duration: 1.1, stagger: 0.12 }, "-=0.9");
+    .from(".hero-copy .kicker", { y: 22, autoAlpha: 0, duration: 0.65 }, "-=0.35")
+    .from(heroWords, { yPercent: 110, rotate: 2, autoAlpha: 0, duration: 0.8, stagger: 0.045 }, "-=0.35")
+    .from(".hero-lead", { y: 24, autoAlpha: 0, duration: 0.7 }, "-=0.45")
+    .from(".hero-actions", { y: 20, autoAlpha: 0, duration: 0.65 }, "-=0.42")
+    .from(".hero-assurance", { y: 12, autoAlpha: 0, duration: 0.55 }, "-=0.38")
+    .from(".hero-facts li", { y: 15, autoAlpha: 0, duration: 0.55, stagger: 0.08 }, "-=0.25")
+    .from("[data-hero-image]", { clipPath: "inset(100% 0 0 0)", autoAlpha: 0, duration: 1.15 }, "-=1.25")
+    .from("[data-hero-image] img", { scale: 1.065, duration: 1.45 }, "<")
+    .from(".hero-glow", { scale: 0.62, autoAlpha: 0, duration: 1.2 }, "-=1.2")
+    .from(".hero-orbit", { scale: 0.72, autoAlpha: 0, duration: 1.1, stagger: 0.12 }, "-=1.05");
 
   gsap.utils.toArray("[data-reveal]").forEach((element) => {
     gsap.from(element, {
@@ -117,7 +159,7 @@ function setupMotion() {
     });
   });
 
-  gsap.utils.toArray("[data-reveal-group]").forEach((group) => {
+  gsap.utils.toArray("[data-reveal-group]:not(.mosaic)").forEach((group) => {
     const children = Array.from(group.children);
     gsap.from(children, {
       y: 42,
@@ -131,6 +173,30 @@ function setupMotion() {
         once: true,
       },
     });
+  });
+
+  gsap.from(".mosaic figure", {
+    clipPath: "inset(0 0 100% 0 round 16px)",
+    duration: 1.05,
+    ease: "power3.inOut",
+    stagger: 0.12,
+    scrollTrigger: {
+      trigger: ".mosaic",
+      start: "top 80%",
+      once: true,
+    },
+  });
+
+  gsap.from(".mosaic figure img", {
+    scale: 1.12,
+    duration: 1.35,
+    ease: "power3.out",
+    stagger: 0.12,
+    scrollTrigger: {
+      trigger: ".mosaic",
+      start: "top 80%",
+      once: true,
+    },
   });
 
   gsap.to(".hero-media img", {
@@ -155,6 +221,82 @@ function setupMotion() {
       scrub: 1,
     },
   });
+
+  gsap.utils.toArray(".image-card img").forEach((image) => {
+    gsap.fromTo(
+      image,
+      { yPercent: -3, scale: 1.06 },
+      {
+        yPercent: 3,
+        scale: 1.06,
+        ease: "none",
+        scrollTrigger: {
+          trigger: image.closest(".image-card"),
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 0.9,
+        },
+      },
+    );
+  });
+
+  gsap.fromTo(
+    ".safety-banner img",
+    { scale: 1.04, xPercent: 2 },
+    {
+      scale: 1.04,
+      xPercent: -1.5,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".safety-banner",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 1,
+      },
+    },
+  );
+
+  gsap.from(".cta-main-image", {
+    clipPath: "inset(0 0 100% 0 round 43% 43% 18px 18px)",
+    scale: 1.06,
+    duration: 1.15,
+    ease: "power3.inOut",
+    scrollTrigger: {
+      trigger: ".cta-visual",
+      start: "top 78%",
+      once: true,
+    },
+  });
+
+  gsap.from(".cta-small-image", {
+    y: 50,
+    rotate: -7,
+    autoAlpha: 0,
+    duration: 0.85,
+    ease: "back.out(1.25)",
+    scrollTrigger: {
+      trigger: ".cta-visual",
+      start: "top 70%",
+      once: true,
+    },
+  });
+
+  gsap.fromTo(
+    ".final-cta .button",
+    { boxShadow: "0 0 0 rgba(200, 79, 112, 0)" },
+    {
+      boxShadow: "0 18px 52px rgba(200, 79, 112, 0.38)",
+      duration: 0.75,
+      repeat: 1,
+      yoyo: true,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: ".final-cta .button",
+        start: "top 88%",
+        once: true,
+      },
+    },
+  );
 
   window.addEventListener(
     "load",

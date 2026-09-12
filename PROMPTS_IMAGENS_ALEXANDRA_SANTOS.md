@@ -248,6 +248,41 @@ Constraints: identity must clearly match the reference woman; no text, logo, wat
 Avoid: beauty-filter plasticity, face alteration, generic model, washed-out exposure, monochrome pink grading, excessive smoothing, cropped hair, malformed fingers.
 ```
 
+### 12 — Hero natural e modelo ilustrativa sem repetição
+
+#### 12A — Hero integrado ao fundo grafite-vinho
+
+**Uso:** primeira dobra do site. O fundo da própria fotografia deve terminar na mesma cor do CSS (`#1A1014`) para não surgir uma caixa retangular ao redor do retrato.
+
+```text
+Use case: identity-preserve
+Asset type: seamless portrait for the right side of a premium aesthetics website hero.
+Input images: Images 1–3 are the authorized identity references of Alexandra Santos. Image 4 is a natural-retouching and pose-quality reference from the same project.
+Primary request: Create a new photorealistic studio portrait of Alexandra Santos that feels candid, warm and credible rather than posed or artificial. Preserve her recognizable face, medium warm skin tone, brown eyes, long black wavy hair and vivid fuchsia-pink professional coat. Pose her standing at a subtle three-quarter angle with shoulders relaxed and level, head nearly upright, a soft genuine smile and direct gaze. Her hands rest naturally together at waist level; show her from the upper thighs upward.
+Scene/backdrop: perfectly uniform matte near-black burgundy background in exact color #1A1014, extending cleanly to every edge and corner so it blends invisibly into the website.
+Composition/framing: vertical 4:5 canvas, full hair and both elbows and hands safely inside the frame, generous safety margin above the head, balanced silhouette for anchoring on the right.
+Lighting/mood: large neutral softbox from front-left and restrained rim light, daylight-balanced, calm and welcoming, with natural skin texture.
+Constraints: preserve Alexandra's identity; anatomically correct hands; realistic hair and fabric; no visible rectangle edge, no text, logo, watermark, furniture or props.
+Avoid: cropped head, head tilt, rigid crossed arms, exaggerated glamour pose, pink fog, checkerboard, gradient backdrop, plastic skin, altered face, generic model or extra fingers.
+```
+
+#### 12B — Close de pele com modelo ilustrativa
+
+**Uso:** mosaico editorial da seção de abertura. Esta pessoa não representa uma paciente ou resultado real.
+
+```text
+Use case: photorealistic-natural
+Asset type: vertical editorial skin-detail photograph for a premium aesthetics landing-page mosaic.
+Primary request: Create an illustrative close-up of an anonymous adult Brazilian woman who is clearly a different person from Alexandra Santos: light-to-medium warm brown skin, hazel-brown eye, dark brown hair pulled softly back, neutral rose lips and no beauty mark. Emphasize healthy real skin with subtle pores, fine facial texture and natural expression. This is a decorative skin-care image, not a testimonial or before-and-after.
+Scene/backdrop: softly blurred warm taupe studio background.
+Style/medium: high-end natural beauty editorial photography, authentic and understated.
+Composition/framing: vertical 2:3 crop showing one eye, cheek, nose and a partial relaxed smile; face angled slightly toward soft light; no hands and no full-body view.
+Lighting/mood: large neutral softbox, soft shadow, daylight-balanced, calm clinical elegance.
+Color palette: warm natural skin, taupe and muted rose; no strong fuchsia and no global pink grade.
+Constraints: visibly different identity, hair and styling from Alexandra; realistic pores and small natural imperfections; no text, logo, watermark or medical instruments.
+Avoid: resemblance to Alexandra, red lipstick, black long curls, fuchsia coat, beauty-filter skin, excessive retouching, uncanny eye, pink haze or glamour-ad artificiality.
+```
+
 ## Ordem de produção recomendada
 
 1. Gerar `01`, `06A`, `06B` e `09` usando as referências da Alexandra; aprovar primeiro a fidelidade do rosto.
@@ -261,7 +296,7 @@ Todos os arquivos abaixo estão em `assets/generated/` e já foram produzidos em
 
 | Arquivo | Função no layout | Dimensão |
 |---|---|---:|
-| `01-hero-alexandra-rosa.png` | hero principal — **usar esta versão** | 1122 × 1402 |
+| `01-hero-alexandra-rosa.png` | versão anterior do hero, preservada e não utilizada | 1122 × 1402 |
 | `02a-macro-pele-labios.png` | versão anterior genérica — arquivo preservado, não utilizado | 1122 × 1402 |
 | `02b-preparo-clinico.png` | colagem clínica — preparo | 1122 × 1402 |
 | `02c-detalhe-organico.png` | colagem clínica — detalhe | 1672 × 941 |
@@ -276,10 +311,12 @@ Todos os arquivos abaixo estão em `assets/generated/` e já foram produzidos em
 | `09a-cta-alexandra-rosa.png` | retrato grande do CTA final — **usar esta versão** | 1122 × 1402 |
 | `09b-cta-alexandra-detalhe-rosa.png` | cartão menor do CTA final; reutiliza o close rosa para consistência visual | 1122 × 1402 |
 | `10a-alexandra-diptico-identidade.png` | tela do celular; removida do card de clareza | 1122 × 1402 |
-| `10b-alexandra-macro-pele.png` | macro da abertura; removida do card de naturalidade | 1024 × 1536 |
+| `10b-alexandra-macro-pele.png` | versão anterior com a Alexandra, preservada e não utilizada | 1024 × 1536 |
 | `10c-alexandra-banner-avaliacao.png` | versão anterior do banner, preservada e não utilizada | 1672 × 941 |
 | `11a-alexandra-studio-naturalidade.png` | card Naturalidade — **nova versão ativa em estúdio** | 1122 × 1402 |
 | `11b-alexandra-studio-clareza.png` | card Clareza — **nova versão ativa em estúdio** | 1122 × 1402 |
 | `11c-alexandra-studio-seguranca.png` | banner Segurança e critério — **nova versão ativa sem filtro rosa** | 1672 × 941 |
+| `12a-hero-alexandra-natural.png` | hero principal — **versão ativa com pose natural e margem acima da cabeça** | 1122 × 1402 |
+| `12b-macro-pele-modelo-ilustrativa.png` | mosaico de pele — **versão ativa sem repetir a Alexandra** | 1024 × 1536 |
 
 O logo com fundo transparente permanece em `assets/logo-alexandra-santos-transparente.png`. Ícones devem ser SVGs e a prova social deve ser inserida apenas com imagens reais autorizadas.
