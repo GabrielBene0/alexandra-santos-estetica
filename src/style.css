@@ -182,21 +182,11 @@ h3 {
   transition: background 220ms ease, border-color 220ms ease, box-shadow 220ms ease, color 220ms ease, transform 220ms ease;
 }
 
-.button::after {
-  content: "↗";
-  font-size: 0.95em;
-  transition: transform 220ms ease;
-}
-
 .button:hover {
   border-color: var(--pink-deep);
   background: var(--pink-deep);
   box-shadow: 0 16px 36px rgba(158, 40, 75, 0.28);
   transform: translateY(-2px);
-}
-
-.button:hover::after {
-  transform: translate(3px, -3px);
 }
 
 .button-small {
@@ -766,16 +756,6 @@ h3 {
   text-transform: uppercase;
 }
 
-.service-card a::after {
-  flex: 0 0 auto;
-  content: "↗";
-  transition: transform 220ms ease;
-}
-
-.service-card:hover a::after {
-  transform: translate(3px, -3px);
-}
-
 /* Consultation */
 .consult {
   z-index: 1;
@@ -1289,8 +1269,17 @@ h3 {
   background: var(--pink-bright);
   box-shadow: 0 16px 42px rgba(98, 16, 46, 0.33);
   color: white;
-  font-size: 1.45rem;
   transition: transform 220ms ease;
+}
+
+.whatsapp-icon {
+  width: 23px;
+  height: 23px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
 }
 
 .floating-whatsapp:hover {
